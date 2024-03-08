@@ -1,0 +1,33 @@
+.Card {
+    width: 100%; 
+    margin-bottom: 2rem; 
+}
+
+.Card img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.Card a {
+    text-decoration: none;
+}
+
+.Card h4 {
+    text-align: center;
+    padding: 0.7rem;
+}
+
+
+@media (min-width: 768px) {
+    .Card {
+        width: calc(50% - 1rem); 
+        margin-right: 2rem; 
+        margin-bottom: 2rem; 
+        float: left;
+    }
+
+    .Card:nth-child(2n) {
+        margin-right: 0; 
+    }
+}
+

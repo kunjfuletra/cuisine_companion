@@ -46,11 +46,42 @@
   
   @media (max-width: 768px) {
     .card {
-      min-height: 12rem; /* Adjusted card height for smaller screens */
+      min-height: 12rem; 
     }
   
     .card p {
-      font-size: 14px; /* Adjusted font size for smaller screens */
+      font-size: 14px; 
     }
   }
-  
+
+.wrapper {
+  margin-top: 20px;
+}
+
+.splide__arrow {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  color: #333;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.splide__arrow:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.splide__arrow::before {
+  font-family: "FontAwesome";
+}
+.splide__arrow--prev {
+  left: 10px;
+}
+
+.splide__arrow--next {
+  right: 10px;
+}
+

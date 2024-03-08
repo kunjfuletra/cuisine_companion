@@ -1,4 +1,3 @@
-// import Veggie from "../components/Veggie";
 import Veggie from "../components/veggie/Veggie";
 import Popular from "../components/Popular";
 import React from 'react';
