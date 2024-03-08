@@ -7,12 +7,27 @@ import {Link} from "react-router-dom";
 function Popular() {
   
   const[popular, setPopular] = useState([]);
+  const [perPage, setPerPage] = useState(3);
   useEffect(() =>
   {
     getPopular();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   },[]);
 
-
+  const handleResize = () => {
+    const width = window.innerWidth;
+    let newPerPage = 3;
+    if (width < 768) {
+      newPerPage = 2;
+    }
+    if (width < 480) {
+      newPerPage = 1;
+    }
+    if (perPage !== newPerPage) {
+      setPerPage(newPerPage);
+    }
+  };
 
   const getPopular = async() =>{
 
@@ -40,7 +55,7 @@ function Popular() {
               <h3>Popular Picks</h3>
 
               <Splide options={{
-                perPage : 4,
+                perPage : perPage,
                 arrows : false,
                 pagination : false,
                 drag: 'free',

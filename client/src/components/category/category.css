@@ -1,0 +1,58 @@
+.slink {
+    display: flex;
+    flex-direction: column; /* Corrected flex-direction property */
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    background: linear-gradient(35deg, #494949, #313131);
+    width: 6rem;
+    height: 6rem;
+    cursor: pointer;
+    transform: scale(0.9);
+    margin: 0.5rem;
+  }
+  
+  .slink h4 {
+    color: white;
+    font-size: 0.8rem;
+    padding-left: 0.3rem;
+    margin-top: 0.5rem;
+  }
+  
+  .slink svg {
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  .slink.active {
+    background: linear-gradient(to right, #f27121, #e94057);
+  }
+  
+  .slink.active svg,
+  .slink.active h4 {
+    color: white;
+  }
+
+.list{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .slink {
+      width: 5rem; /* Adjusted width for smaller screens */
+      height: 5rem; /* Adjusted height for smaller screens */
+    }
+  
+    .slink h4 {
+      font-size: 0.7rem; /* Adjusted font size for smaller screens */
+    }
+  
+    .slink svg {
+      font-size: 1.2rem; /* Adjusted font size for smaller screens */
+    }
+  }
+  
